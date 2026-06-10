@@ -1,0 +1,62 @@
+locator.click: Error: strict mode violation: locator('form>button[type=\'submit\']') resolved to 3 elements:
+    1) <button type="submit" class="btn btn-light btn-lg">…</button> aka getByRole('button').filter({ hasText: /^$/ })
+    2) <button type="submit" title="Remove" class="btn btn-danger" data-bs-toggle="tooltip">…</button> aka getByTitle('Remove').first()
+    3) <button type="submit" title="Remove" class="btn btn-danger" data-bs-toggle="tooltip">…</button> aka getByTitle('Remove').nth(1)
+
+Call log:
+  - waiting for locator('form>button[type=\'submit\']')
+
+    at HomePage.clickSearch (D:\IdeaProjects\playwrightproject\pages\HomePage.ts:63:34)
+    at D:\IdeaProjects\playwrightproject\tests\SearchProducts.spec.ts:31:16 {
+  [Symbol(step)]: {
+    location: {
+      file: 'D:\\IdeaProjects\\playwrightproject\\pages\\HomePage.ts',
+      line: 63,
+      column: 34,
+      function: 'HomePage.clickSearch'
+    },
+    category: 'pw:api',
+    title: "Click locator('form>button[type=\\'submit\\']')",
+    apiName: 'locator.click',
+    params: {
+      selector: "form>button[type='submit']",
+      strict: true,
+      timeout: 0
+    },
+    group: undefined,
+    stepId: 'pw:api@43',
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'pw:api@43',
+      _title: "Click locator('form>button[type=\\'submit\\']')",
+      _parentStep: undefined,
+      skip: [Function (anonymous)]
+    },
+    complete: [Function: complete],
+    endWallTime: 1781035201427,
+    error: {
+      message: "Error: locator.click: Error: strict mode violation: locator('form>button[type=\\'submit\\']') resolved to 3 elements:\n" +
+        `    1) <button type="submit" class="btn btn-light btn-lg">…</button> aka getByRole('button').filter({ hasText: /^$/ })\n` +
+        `    2) <button type="submit" title="Remove" class="btn btn-danger" data-bs-toggle="tooltip">…</button> aka getByTitle('Remove').first()\n` +
+        `    3) <button type="submit" title="Remove" class="btn btn-danger" data-bs-toggle="tooltip">…</button> aka getByTitle('Remove').nth(1)\n` +
+        '\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('form>button[type=\\'submit\\']')\x1B[22m\n",
+      stack: "Error: locator.click: Error: strict mode violation: locator('form>button[type=\\'submit\\']') resolved to 3 elements:\n" +
+        `    1) <button type="submit" class="btn btn-light btn-lg">…</button> aka getByRole('button').filter({ hasText: /^$/ })\n` +
+        `    2) <button type="submit" title="Remove" class="btn btn-danger" data-bs-toggle="tooltip">…</button> aka getByTitle('Remove').first()\n` +
+        `    3) <button type="submit" title="Remove" class="btn btn-danger" data-bs-toggle="tooltip">…</button> aka getByTitle('Remove').nth(1)\n` +
+        '\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('form>button[type=\\'submit\\']')\x1B[22m\n" +
+        '\n' +
+        '    at HomePage.clickSearch (D:\\IdeaProjects\\playwrightproject\\pages\\HomePage.ts:63:34)\n' +
+        '    at D:\\IdeaProjects\\playwrightproject\\tests\\SearchProducts.spec.ts:31:16',
+      cause: undefined
+    }
+  }
+}
