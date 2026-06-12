@@ -39,8 +39,8 @@ test('user Add to cart test', async ({ page }) => {
 await homepage.enterProductName(config.productName)
 await homepage.clickSearch();
 expect(await Search.IsProductExist(config.productName)).toBeTruthy();
+expect(await Search.IsSearchResultExist()).toBeTruthy();
 await Search.selectProduct(config.productName);
-  expect(await Search.IsSearchResultExist()).toBeTruthy();
 
 await productpage.setQuantity("3");
 await productpage.addToCart();

@@ -45,7 +45,7 @@ export class ProductPage {
         }
     }
     async clickViewCArt():Promise<ShoppingCartPage>{
-        await this.viewCart.click()
+        await this.btnItems.click()
         return new ShoppingCartPage(this.page);
     }
 
